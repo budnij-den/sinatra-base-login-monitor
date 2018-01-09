@@ -4,8 +4,9 @@ require 'sinatra/base'
 
 class LoginScreen < Sinatra::Base
   enable :sessions
+  enable :static
 
-  get '/*' do
+  get '/' || '/login' do
     erb :login
   end
 
@@ -26,7 +27,7 @@ class MyApp < Sinatra::Base
 
   before do
     unless session['user_name']
-      halt "Access denied, please <a href='/login'>login</a>. <br><blockquote  class=\"blockquote\"> #{session.inspect}</blockquote>"
+      halt "Access denied, please <a href='/'>login</a>."
     end
   end
 
@@ -35,8 +36,4 @@ class MyApp < Sinatra::Base
   end
 end
 
-# run! if app_file == $0
-
-#run Sinatra::Base::MyApp.run!
-
-#Sinatra::Base::MyApp.run!
+Sinatra::Base::MyApp.run!

@@ -7,6 +7,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="ruby-2.4.2-p198" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="sinatra (v2.0.0, ruby-2.4.2-p198) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.4, ruby-2.4.2-p198) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.5.1, ruby-2.4.2-p198) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shotgun (v0.9.2, ruby-2.4.2-p198) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sinatra-base (v1.4.0, ruby-2.4.2-p198) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-2.4.2-p198) [gem]" level="application" />
   </component>
 </module>
