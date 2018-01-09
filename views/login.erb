@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login monitor</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+
+<% if @error %>
+  <div  style="position: absolute; top: 1em; left: 0; right: 0; color: red; text-align: center;">
+    <p> <%= @error%> </p>
+  </div>
+<% end %>
+
+<form action="/login" method="post" style="margin: auto; width: 33%; text-align: center; padding-top: 3em;">
+  <div class="form-group">
+    <input autofocus name="name" class="form-control" type="text" placeholder="place login here">
+    <br>
+    <input name="password" class="form-control" type="password" placeholder="place secret here">
+    <br>
+    <input class="btn btn-primary" type="submit" value="register">
+  </div>
+</form>
+
+<div style="margin: 0 auto; text-align: center;">
+  <a href="/greeting" class="btn btn-lg btn-warning" style="">try greet</a>
+</div>
+<br>
+<%= session.inspect%>
+
+
+</body>
+</html>
